@@ -42,6 +42,12 @@ var Remark = require('remark/component');
 var editor = React.renderComponent(Remark(), document.getElementById('editor'));
 ```
 
+## Browser Support
+
+Tested in Chrome 35, Safari 6.1.1, and Firefox 29.
+
+Internet Explorer 10 & 11 should also be supported but are untested currently.
+
 ## License
 
 MIT
