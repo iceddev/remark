@@ -1,0 +1,66 @@
+/* Injected Remark Styles */
+.remark-container,
+.remark-row {
+  display: -ms-flexbox;      /* IE 10 */
+  display: -webkit-flex;     /* Older Webkit */
+  display: flex;             /* Standard */
+}
+
+.remark-container,
+.remark-row,
+.remark-slug,
+.remark-editor,
+.remark-preview {
+  -ms-flex: 1;     /* IE 10 */
+  -webkit-flex: 1; /* Older Webkit */
+  flex: 1;         /* Standard */
+}
+
+.remark-title {
+  -ms-flex: 2;     /* IE 10 */
+  -webkit-flex: 2; /* Older Webkit */
+  flex: 2;         /* Standard */
+}
+
+.remark-container {
+  -ms-flex-direction: column;     /* IE 10 */
+  -webkit-flex-direction: column; /* Older Webkit */
+  flex-direction: column;         /* Standard */
+
+  margin: 0 10px;
+}
+
+.remark-row:first-child {
+  max-height: 3.2em;
+  margin: 10px 0 5px;
+}
+
+.remark-title,
+.remark-slug,
+.remark-editor {
+  border: 0;
+  outline: none;
+  resize: none;
+}
+
+.remark-title,
+.remark-slug {
+  font-size: 1.6em;
+  padding: 10px;
+}
+
+.remark-title,
+.remark-editor {
+  margin-right: 5px;
+}
+
+.remark-editor,
+.remark-preview {
+  font-size: 1.4em;
+  background: #fff;
+  padding: 10px;
+}
+
+.remark-preview > :first-child {
+  margin-top: 0;
+}

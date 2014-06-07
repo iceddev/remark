@@ -1,0 +1,48 @@
+{
+  "name": "remark",
+  "version": "0.1.0",
+  "description": "Forward-looking Markdown editor built in React",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -s Remark -t brfs component.js > dist/component.js && browserify -s Remark -t brfs index.js > dist/remark.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iceddev/remark"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "markdown",
+    "editor",
+    "blog",
+    "post"
+  ],
+  "author": "Blaine Bublitz <blaine@iceddev.com> (http://iceddev.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iceddev/remark/issues"
+  },
+  "homepage": "https://github.com/iceddev/remark",
+  "dependencies": {
+    "envify": "^1.2.1",
+    "fluxxor": "^1.2.0",
+    "insert-css": "^0.1.1",
+    "lodash": "git+ssh://git@github.com:lodash/lodash#79829aec234e9a5deb04616dd228f710ac2b08f7",
+    "marked": "^0.3.2",
+    "react": "^0.10.0"
+  },
+  "devDependencies": {
+    "brfs": "^1.1.1",
+    "browserify": "^4.1.8",
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1",
+    "watchify": "^0.10.2"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  }
+}
