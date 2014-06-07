@@ -4,7 +4,10 @@
   "description": "Forward-looking Markdown editor built in React",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -s Remark -t brfs component.js > dist/component.js && browserify -s Remark -t brfs index.js > dist/remark.js",
+    "prepublish": "npm run build && npm run component && npm run minify",
+    "build": "browserify -s Remark -t brfs index.js > dist/remark.js",
+    "component": "browserify -x react -s Remark -t brfs component.js > dist/component.js",
+    "minify": "uglifyjs dist/remark.js > dist/remark.min.js && uglifyjs dist/component.js > dist/component.min.js",
     "test": "mocha"
   },
   "repository": {
@@ -38,6 +41,7 @@
     "browserify": "^4.1.8",
     "chai": "^1.9.1",
     "mocha": "^1.20.1",
+    "uglify-js": "^2.4.13",
     "watchify": "^0.10.2"
   },
   "browserify": {
